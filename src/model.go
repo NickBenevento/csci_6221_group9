@@ -29,19 +29,19 @@ func main() {
 	// Test various images from google
 
 	img := "image_test/happy.jpg"
-	predict_emotion(model, img, "happy")
+	predict_emotion(model, img, "happy 😊")
 
 	img = "image_test/angry.jpg"
-	predict_emotion(model, img, "angry")
+	predict_emotion(model, img, "angry 😠")
 
 	img = "image_test/sad.jpg"
-	predict_emotion(model, img, "sad")
+	predict_emotion(model, img, "sad 😢")
 
 	img = "image_test/surprise.jpg"
-	predict_emotion(model, img, "surprise")
+	predict_emotion(model, img, "surprise 😯")
 
 	img = "image_test/surprise2.png"
-	predict_emotion(model, img, "surprise")
+	predict_emotion(model, img, "surprise 😯")
 
 }
 
@@ -170,19 +170,19 @@ func getPixelArray(img image.Image) []int {
 func get_emotion_from_label(label int) string {
 	switch (label) {
 	case 0:
-		return "angry"
+		return "angry 😠"
 	case 1:
-		return "disgust"
+		return "disgust 😖"
 	case 2:
-		return "fear"
+		return "fear 😱"
 	case 3:
-		return "happy"
+		return "happy 😊"
 	case 4:
-		return "neutral"
+		return "neutral 😐"
 	case 5:
-		return "sad"
+		return "sad 😢"
 	case 6:
-		return "surprise"
+		return "surprise 😯"
 	default:
 		return ""
 	}
