@@ -8,3 +8,5 @@ The goal of this project is to be able to identify the emotion of a person’s f
 
 ## **Presentations**
 [Parts 2, 3, 4](https://docs.google.com/presentation/d/1ogCyM_wuCYVEiknIjvbmCnuV05fO_NjFAIzFdFHc-RE/edit?usp=sharing)
+
+[Part 5](https://docs.google.com/presentation/d/1tKYbDo4tFPoj01kLU4ZOklXFv4MEED6a4ujrVNtWpHw/edit#slide=id.p)
