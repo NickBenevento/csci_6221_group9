@@ -26,24 +26,29 @@ func main() {
 
 	fmt.Println("Done.")
 
+	// Test various images from google
 
 	img := "image_test/happy.jpg"
 	predict_emotion(model, img, "happy")
 
-	img = "image_test/happy2.png"
-	predict_emotion(model, img, "happy")
+	img = "image_test/angry.jpg"
+	predict_emotion(model, img, "angry")
+
+	img = "image_test/sad.jpg"
+	predict_emotion(model, img, "sad")
+
+	img = "image_test/surprise.jpg"
+	predict_emotion(model, img, "surprise")
+
+	img = "image_test/surprise2.png"
+	predict_emotion(model, img, "surprise")
 
 }
 
 
+// Given the ML model and a path to an image, predict the emotion in the image
 func predict_emotion(model *ensemble.RandomForest, img string, emotion string) {
-	// Test the model on random pictures to see it working in action
-	// image_array := imageToArray("image_test/angry.jpg")
-	// image_array := imageToArray("image_test/fear.jpg")
-
-	// image_array := imageToArray("image_test/surprise2.jpg")
-	// image_array := imageToArray("image_test/surprise.png")
-	// image_array := imageToArray("image_test/happy.jpg")
+	// apply image processing and convert the image to an array of pixels
 	image_array := imageToArray(img)
 
 	// Save the converted image to a csv
@@ -84,6 +89,7 @@ func predict_emotion(model *ensemble.RandomForest, img string, emotion string) {
 }
 
 
+// Saves an image in the form of an array of pixels to a csv
 func saveImageArrayToCsv(array []int, file_name string) {
 	var headers []string
 	var row []string
@@ -115,6 +121,7 @@ func saveImageArrayToCsv(array []int, file_name string) {
 }
 
 
+// Converts an image to a 48*48 grayscale image, in the form of an array of pixels
 func imageToArray(image_path string) []int {
 	src, err := imaging.Open(image_path)
 	if err != nil {
@@ -137,6 +144,7 @@ func imageToArray(image_path string) []int {
 }
 
 
+// Convters the given image to an array of pixels. Assumes the array is already grayscale
 func getPixelArray(img image.Image) []int {
 	var pixels []int
 
