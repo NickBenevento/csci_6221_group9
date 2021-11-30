@@ -3,6 +3,7 @@ module github.com/NickBenevento/csci_6221_group9
 go 1.17
 
 require (
+	github.com/disintegration/imaging v1.6.2 // indirect
 	github.com/gonum/blas v0.0.0-20181208220705-f22b278b28ac // indirect
 	github.com/gonum/lapack v0.0.0-20181123203213-e4cdc5a0bff9 // indirect
 	github.com/gonum/matrix v0.0.0-20181209220409-c518dec07be9 // indirect
@@ -16,7 +17,8 @@ require (
 	github.com/sjwhitworth/golearn v0.0.0-20211014193759-a8b69c276cd8 // indirect
 	github.com/smartystreets/assertions v1.2.1 // indirect
 	github.com/smartystreets/goconvey v1.7.2 // indirect
-	golang.org/x/exp v0.0.0-20211121162702-d9423ad70779 // indirect
+	golang.org/x/exp v0.0.0-20211123021643-48cbe7f80d7c // indirect
+	golang.org/x/image v0.0.0-20210216034530-4410531fe030 // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
 	golang.org/x/tools v0.1.8-0.20211029000441-d6a9af8af023 // indirect
 	gonum.org/v1/gonum v0.9.3 // indirect

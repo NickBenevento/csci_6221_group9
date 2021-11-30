@@ -1,3 +1,12 @@
+"""
+Script used to convert the test/train image data from jpegs to csv files.
+
+This is necessary so the machine learning model can "read" the images.
+The script works by getting a matrix of the rgb values for each of the pixels (0-255),
+flattening the matrix into a 1-dimensional array, adding the emotion label to the end of 
+the array, then appending that array to the csv.
+"""
+
 import os
 import glob
 
