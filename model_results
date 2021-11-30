@@ -1,8 +1,4 @@
 Linear SVC:
-
-Loading data...Done
-Training model...Done.
-Testing model...
 Reference Class True Positives  False Positives True Negatives  Precision       Recall  F1 Score
 --------------- --------------  --------------- --------------  ---------       ------  --------
 6               69              64              6283            0.5188          0.0830  0.1432
@@ -15,8 +11,6 @@ Reference Class True Positives  False Positives True Negatives  Precision       
 Overall accuracy: 0.2474
 
 KNN:
-Training model...Done.
-Testing model...
 Reference Class True Positives  False Positives True Negatives  Precision       Recall  F1 Score
 --------------- --------------  --------------- --------------  ---------       ------  --------
 5               287             665             5266            0.3015          0.2302  0.2610
@@ -39,7 +33,6 @@ Reference Class True Positives  False Positives True Negatives  Precision       
 6               392             482             5865            0.4485          0.4717  0.4598
 3               832             1144            4260            0.4211          0.4690  0.4437
 Overall accuracy: 0.3363
-
 
 Random forest (32 Trees):
 Reference Class True Positives  False Positives True Negatives  Precision       Recall  F1 Score
