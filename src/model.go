@@ -22,7 +22,12 @@ func main() {
 	// Load the trained model
 	fmt.Print("Loading model... ")
 	model := ensemble.NewRandomForest(32, 48*48)
-	model.Load("random_forest_32_trees")
+	err := model.Load("random_forest_32_trees")
+
+	if err != nil {
+		fmt.Println("There was an error loading the model")
+		panic(err)
+	}
 
 	fmt.Println("Done.")
 
@@ -129,10 +134,10 @@ func imageToArray(image_path string) []int {
 		panic(err)
 	}
 
+	// resize to fit the model input
+	src = imaging.Resize(src, 48, 48, imaging.Lanczos)
 	// convert to grayscale
 	src = imaging.Grayscale(src)
-	// resize to fit the model input
-	src = imaging.Resize(src, 48, 48, imaging.Box)
 
 	err = imaging.Save(src, "image_test/out.jpg")
 
